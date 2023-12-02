@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,37 +7,89 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            background-color: #121212;
             text-align: center;
+            color: #ffffff;
             padding: 50px;
         }
+        
+        /* Apply styles for screens larger than 768px (not mobile) */
+        @media screen and (min-width: 769px) {
+            .challenge-box {
+                display: none; /* Hide the challenge-box div on larger screens */
+            }
+        }
+
         .challenge-box {
-            background-color: #ffffff;
+            background-color: #1e1e1e;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             display: inline-block;
-            margin-top: 100px;
+            margin-top: 50px;
+            max-width: 600px;
         }
         .hint {
-            font-size: 18px;
-            color: #333333;
+            font-size: 20px;
+            color: #f4f4f4;
+            margin: 20px 0;
+        }
+        .hidden-link {
+            font-size: 0;
+            color: transparent;
+            background-color: transparent;
+            width: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            border: none;
+            overflow: hidden;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
+<!-- Show the challenge-box div only on screens with a width of 768px or less (mobile view) -->
 <div class="challenge-box">
-    <h1>CTF Challenge</h1>
+    <h1 style="font-size: 32px;">CTF Challenge</h1>
     <p class="hint">
-        To unlock the next level, follow the path that's hidden. <br>
-        The answer is right in front of you, but not where you first looked. <br>
-        What's commonly developed is often left unseen, until you check behind the scenes.
+        <span style="font-size: 24px;">To unlock the next level, follow the path that's hidden.</span> <br>
+        <span style="font-size: 20px;">The answer is right in front of you, but not where you first looked.</span> <br>
+        <span style="font-size: 20px;">What's commonly developed is often left unseen, until you check behind the scenes.</span>
     </p>
     <img src="https://raw.githubusercontent.com/yashpapa6969/gdsc-q3/main/dhruvsteg.jpg" alt="Can you find the URL hidden in this image?" />
 </div>
-    <!-- Uncomment the following line for the solution -->
-    <!-- <p>Fbyhgvba: Nccraq "/qri" gb gur HEY nobir.</p> -->
+
+<div class="challenge-box">
+    <h1 style="font-size: 32px;">CTF Challenge</h1>
+    <p class="hint">
+        <span style="font-size: 20px;">To proceed, you'll need to uncover the hidden link below.</span> <br>
+        <span style="font-size: 20px;">It's not visible to the naked eye, but a keen observer will find it.</span> <br>
+        <span style="font-size: 20px;">Look closely at the text:</span> <br>
+        <span class="hidden-link" style="font-size: 24px;">Find the link: futureboy.us/stegano/decinput.html</span>
+    </p>
+</div>
+
+<style>
+    .hidden-link {
+        font-size: 0;
+        color: transparent;
+        background-color: transparent;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        border: none;
+        overflow: hidden;
+    }
+</style>
+
+<!-- Uncomment the following line for the solution -->
+<!-- <p>Fbyhgvba: Nccraq "/qri" gb gur HEY nobir.</p> -->
 </body>
 </html>
-
